@@ -1,10 +1,14 @@
 import {Stack, useLocalSearchParams } from 'expo-router';
 import {View, Text, Image, StyleSheet, Pressable} from 'react-native'
 import { useState } from 'react';
+import diseases from './info/disease';
+
+const { id } = useLocalSearchParams();
+const disease = diseases.find((d) => d.id.toString() === id);
 
 const DiseaseScreen = () =>{
     <View style = {style.container}>
-        <Stack.Screen options={{title: "Diseases"}}/>{// should be changed to the specific disease
+        <Stack.Screen options={{title: disease.name}}/>{// should be changed to the specific disease
 
         }
     </View>
