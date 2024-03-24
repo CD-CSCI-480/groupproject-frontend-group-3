@@ -11,7 +11,7 @@ const MenuScreen = () =>{
             //renderItem={({item}) => }
             //keyExtractor={(item) => item.id.toString()}
             renderItem={({ item }) => (
-              <Options example = {item}/>
+              <Options d = {item}/>
                /*<View style={styles.item}>
                   <Text style = {styles.name}>{item.name}</Text>
                   <Image source={{uri: item.picture}}/>
@@ -32,7 +32,8 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'left',
         backgroundColor: '#fff',
-        width : "100%"
+        width : "100%",
+        marginTop: 30,
     },
     item: {
         flex: 1,
