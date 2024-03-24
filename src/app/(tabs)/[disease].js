@@ -1,7 +1,7 @@
 import {Stack, useLocalSearchParams } from 'expo-router';
 import {View, Text, Image, StyleSheet, Pressable} from 'react-native'
 import { useState } from 'react';
-import diseases from './Info/disease';
+import diseases from '../Info/disease';
 
 const { id } = useLocalSearchParams();
 const disease = diseases.find((d) => d.id.toString() === id);

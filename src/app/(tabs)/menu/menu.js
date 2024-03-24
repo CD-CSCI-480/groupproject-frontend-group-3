@@ -1,6 +1,7 @@
 import { View, Text, FlatList, StyleSheet, Pressable, Image } from 'react-native';
 import React from 'react';
-import diseases from './Info/disease';
+import diseases from '../../Info/disease';
+import Options from "../../../components/menuoptions";
 
 const MenuScreen = () =>{
     return(
@@ -10,9 +11,11 @@ const MenuScreen = () =>{
             //renderItem={({item}) => }
             //keyExtractor={(item) => item.id.toString()}
             renderItem={({ item }) => (
-                <View style={styles.item}>
+              <Options example = {item}/>
+               /*<View style={styles.item}>
                   <Text style = {styles.name}>{item.name}</Text>
-                </View>
+                  <Image source={{uri: item.picture}}/>
+                </View>*/
               )}
             //numColumns={3}
             contentContainerStyle={{padding: 10}}
@@ -25,16 +28,17 @@ const MenuScreen = () =>{
 
 const styles = StyleSheet.create({
     container: {
-        flex : 1,
+        flex : 1,// Trying to stretch these out
         justifyContent: 'center',
         alignItems: 'left',
         backgroundColor: '#fff',
         width : "100%"
     },
     item: {
-        width: 320,
+        flex: 1,
         marginBottom: 10,
         padding: 10,
+        //width : "100%",
         borderWidth: 1,
         borderColor: '#ccc',
         borderRadius: 5,
