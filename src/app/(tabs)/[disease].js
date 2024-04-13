@@ -3,19 +3,23 @@ import {View, Text, Image, StyleSheet, Pressable} from 'react-native'
 import { useState } from 'react';
 import diseases from '../Info/disease';
 
-const { id } = useLocalSearchParams();
-const disease = diseases.find((d) => d.id.toString() === id);
+
 
 const DiseaseScreen = () =>{
+    
+    const { id } = useLocalSearchParams();
+    disease = diseases.find((d) => d.id.toString() === id);
+    disease = diseases[1];
+/*
     <View style = {style.container}>
-        <Stack.Screen options={{title: disease.name}}/>{/*should be changed to the specific disease*/}
+        <Stack.Screen options={{title: disease.name}}/>{/*should be changed to the specific disease}
         <Image src={disease.picture} style = {style.image}></Image>
         <View> 
             <Text style = {style.text}> {disease.text}</Text>
         </View>
        
     </View>
-
+*/
 }
 const style = StyleSheet.create({
     container: {
@@ -27,7 +31,7 @@ const style = StyleSheet.create({
         width: "80%",
         aspectRatio: 1,
         margin: 10,
-        backgroundColor: "BBE14E",
+        //backgroundColor: "BBE14E",
         borderRadius: 20,
     },
     textContainer: {
