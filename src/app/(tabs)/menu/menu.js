@@ -28,12 +28,12 @@ const MenuScreen = () =>{
 
 const styles = StyleSheet.create({
     container: {
-        flex : 1,// Trying to stretch these out
-        justifyContent: 'center',
-        alignItems: 'left',
-        backgroundColor: '#fff',
-        width : "100%",
-        marginTop: 30,
+      flex : 1,// Trying to stretch these out
+      justifyContent: 'center',
+      //alignItems: 'left',
+      backgroundColor: '#fff',
+      width : "100%",
+      marginTop: 30,
     },
     item: {
         flex: 1,

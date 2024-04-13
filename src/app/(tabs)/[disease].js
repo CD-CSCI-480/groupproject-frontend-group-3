@@ -8,9 +8,12 @@ const disease = diseases.find((d) => d.id.toString() === id);
 
 const DiseaseScreen = () =>{
     <View style = {style.container}>
-        <Stack.Screen options={{title: disease.name}}/>{// should be changed to the specific disease
-
-        }
+        <Stack.Screen options={{title: disease.name}}/>{/*should be changed to the specific disease*/}
+        <Image src={disease.picture} style = {style.image}></Image>
+        <View> 
+            <Text style = {style.text}> {disease.text}</Text>
+        </View>
+       
     </View>
 
 }
