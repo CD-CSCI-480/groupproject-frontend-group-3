@@ -7,11 +7,7 @@ export const HomeScreen = ({navigation}) => {
   return (
     <View style={styles.container}>
       <Text style={styles.text}>Home Screen</Text>
-
-      <Button title='Need a Reminder?' 
-      onPress={() => navigation.navigate("Reminders")}
-      />
-
+      
     </View>
   )
 }

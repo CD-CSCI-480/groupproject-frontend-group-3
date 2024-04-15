@@ -4,17 +4,19 @@ import { Reminders } from './src/app/screens/Reminders';
 import { HomeScreen } from './src/app/screens/Home/HomeScreen';
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
-const Stack = createNativeStackNavigator();
+const Tab = createBottomTabNavigator();
 
 
 export default function App() {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="Home">
-        <Stack.Screen name='Home' component={HomeScreen} />
-        <Stack.Screen name='Reminders' component={Reminders} />
-      </Stack.Navigator>
+      <Tab.Navigator initialRouteName="Home"
+      >
+        <Tab.Screen name='Home' component={HomeScreen} />
+        <Tab.Screen name='Reminders' component={Reminders} />
+      </Tab.Navigator>
     </NavigationContainer>
   );
 }
