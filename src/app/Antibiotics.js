@@ -52,7 +52,7 @@ const styles = StyleSheet.create({
   },
   chemicalBuild: {
     fontSize: 14,
-    color: '#666',
+    color: '#667',
   },
 });
 
