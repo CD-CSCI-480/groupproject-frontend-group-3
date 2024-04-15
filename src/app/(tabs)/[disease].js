@@ -17,11 +17,9 @@ const DiseaseScreen = () =>{
         <View>
             <Image src={disease.picture} style = {style.image}></Image>
         </View>
-        
         <View style = {style.textContainer}> 
             <Text style = {style.text}> {disease.text}</Text>
         </View>
-       
     </View>
 );
 }

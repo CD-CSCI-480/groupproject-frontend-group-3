@@ -1,12 +1,29 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
-//import {TabLayout} from "src/app/tabstemp";
+import Antibiotics from './src/app/Antibiotics';
 import MenuScreen from './src/app/(tabs)/menu/menu';
 import DiseaseScreen from './src/app/(tabs)/[disease]';
-export default function App() {
+import { Reminders } from './src/app/screens/Reminders';
+import { HomeScreen } from './src/app/screens/Home/HomeScreen';
+import {NavigationContainer} from '@react-navigation/native';
+import {createNativeStackNavigator} from '@react-navigation/native-stack';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
-  return(
-    <DiseaseScreen/>
+const Tab = createBottomTabNavigator();
+
+
+export default function App() {
+  return (
+    // <DiseaseScreen/>
+    // <Antibiotics />
+    <NavigationContainer>
+      <Tab.Navigator initialRouteName="Home">
+        <Tab.Screen name='Home' component={HomeScreen} />
+        <Tab.Screen name='Reminders' component={Reminders} />
+        <Tab.Screen name='Disease' component={MenuScreen}/>
+        <Tab.Screen  name='Antibiotics' component={Antibiotics}/>
+      </Tab.Navigator>
+    </NavigationContainer>
   );
 }
 
