@@ -12,7 +12,7 @@ const antibioticsData = [
 const Antibiotics = () => {
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>List of Antibiotics</Text>
+      
       <FlatList
         data={antibioticsData}
         keyExtractor={(item) => item.id.toString()}
@@ -38,13 +38,16 @@ const styles = StyleSheet.create({
     fontSize: 20,
     fontWeight: 'bold',
     marginBottom: 10,
+    marginTop: 20
   },
   item: {
     marginBottom: 10,
-    padding: 10,
+    paddingVertical: 10,
+    paddingHorizontal: 100,
     borderWidth: 1,
     borderColor: '#ccc',
     borderRadius: 5,
+    marginTop: 100
   },
   name: {
     fontSize: 16,
