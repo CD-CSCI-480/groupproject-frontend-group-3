@@ -19,6 +19,7 @@ export default function App() {
       <Tab.Navigator initialRouteName="Home">
         <Tab.Screen name='Home' component={HomeScreen} />
         <Tab.Screen name='Reminders' component={Reminders} />
+        <Tab.Screen name='Disease' component={MenuScreen}/>
       </Tab.Navigator>
     </NavigationContainer>
   );
