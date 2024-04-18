@@ -7,7 +7,6 @@ export const HomeScreen = ({navigation}) => {
   return (
     <View style={styles.container}>
       <Text style={styles.text}>Home Screen</Text>
-      
     </View>
   )
 }

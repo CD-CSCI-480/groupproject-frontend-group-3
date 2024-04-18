@@ -1,4 +1,3 @@
-import { StyleSheet } from 'react-native';
 import Antibiotics from './src/app/Antibiotics';
 import MenuScreen from './src/app/(tabs)/menu/menu';
 import { RDisplay } from './src/app/screens/Reminders/RDisplay';
@@ -13,8 +12,6 @@ const Tab = createBottomTabNavigator();
 
 export default function App() {
   return (
-    // <DiseaseScreen/>
-    // <Antibiotics />
     <NavigationContainer>
       <Tab.Navigator initialRouteName="Home"
       screenOptions={{

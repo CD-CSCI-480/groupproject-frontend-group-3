@@ -1,8 +1,6 @@
 import React,{useState} from 'react';
-import { View, Text, StyleSheet, Platform, TouchableOpacity, Button} from 'react-native';
+import { View, Text, Platform, TouchableOpacity, Button} from 'react-native';
 import DateTimePicker from '@react-native-community/datetimepicker';
-import PrimaryButton from '../../../../components/PrimaryButton';
-import TimePicker from 'react-time-picker';
 import {styles} from './styles'
 
 const days = [
@@ -15,11 +13,6 @@ const days = [
     {title: 'S', active: false},
   ];
 
-  const appButton = ({ onPress, title }) => {
-    <TouchableOpacity onPress={onPress} style={styles.appButtonContainer}>
-    <Text style={styles.appButtonText}>{title}</Text>
-    </TouchableOpacity>
-  }
 
 export const Reminders = ({navigation}) => {
     const [date, setDate] = useState(new Date(1598051730000));
@@ -31,7 +24,7 @@ export const Reminders = ({navigation}) => {
 
 
     
-    const onChange = (event, selectedDate) => {
+    const onChange = (_event, selectedDate) => {
         const currentDate = selectedDate || date;
         setShow(Platform.OS === 'ios');
         setDate(currentDate);
