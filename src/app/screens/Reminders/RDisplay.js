@@ -1,6 +1,5 @@
 import React from 'react';
 import { Reminders } from './pages/Reminders';
-import { View, Text } from 'react-native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import { ReminderMenu } from './pages/ReminderMenu';
 
