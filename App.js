@@ -23,7 +23,7 @@ export default function App() {
           options={{
             tabBarLabel: 'Home',
             tabBarIcon: ({ color, size }) => (
-            <MaterialCommunityIcons name="home" color={color} size={size} />),
+            <MaterialCommunityIcons name="home-account" color={color} size={size} />),
           }}
         />
 
