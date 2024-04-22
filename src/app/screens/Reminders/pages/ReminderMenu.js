@@ -11,6 +11,7 @@ export const ReminderMenu = ({navigation}) => {
         </Text>
         <Button 
         title="Set One!" 
+        color="#07b81f"
         onPress={() => navigation.navigate("Reminders")} 
         />
     </View>

@@ -1,5 +1,5 @@
 import React,{useState} from 'react';
-import { View, Text, Platform, TouchableOpacity, Button} from 'react-native';
+import { View, Text, Platform, TouchableOpacity, Button, Pressable, TextInput} from 'react-native';
 import DateTimePicker from '@react-native-community/datetimepicker';
 import {styles} from './styles'
 
@@ -42,6 +42,11 @@ export const Reminders = ({navigation}) => {
 
   return (
     <View style= {styles.container}>
+      <View style={styles.headingWrapper}>
+      <Text style={styles.heading}>What is your</Text>
+      <Text style={styles.heading}>medication?</Text>
+      </View>
+      <TextInput  placeholder="Medication" style={styles.input}/>
     <View style= {styles.headingWrapper}>
         <Text style={styles.heading}>What time do you need</Text>
         <Text style={styles.heading}>to take your medication?</Text>
@@ -86,7 +91,14 @@ export const Reminders = ({navigation}) => {
           );
         })}
       </View>
-      <Button title="Go Back" onPress={() => navigation.navigate("ReminderMenu")}/>
+      <Button
+        title='Create'
+        color='#07b81f'
+        accessibilityLabel='Learn more about this button'
+      />
+      <Pressable style={styles.button}>
+        <Text style={styles.buttonText} onPress={() => navigation.navigate("ReminderMenu")}>Go Back</Text>
+      </Pressable>
     </View>
   )
 }
