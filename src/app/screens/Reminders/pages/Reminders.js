@@ -1,8 +1,6 @@
 import React,{useState} from 'react';
-import { View, Text, StyleSheet, Platform, TouchableOpacity} from 'react-native';
+import { View, Text, Platform, TouchableOpacity, Button, Pressable, TextInput} from 'react-native';
 import DateTimePicker from '@react-native-community/datetimepicker';
-import PrimaryButton from '../../../components/PrimaryButton';
-import TimePicker from 'react-time-picker';
 import {styles} from './styles'
 
 const days = [
@@ -15,13 +13,8 @@ const days = [
     {title: 'S', active: false},
   ];
 
-  const appButton = ({ onPress, title }) => {
-    <TouchableOpacity onPress={onPress} style={styles.appButtonContainer}>
-    <Text style={styles.appButtonText}>{title}</Text>
-    </TouchableOpacity>
-  }
 
-export const Reminders = () => {
+export const Reminders = ({navigation}) => {
     const [date, setDate] = useState(new Date(1598051730000));
     const [mode, setMode] = useState('time');
     const [show, setShow] = useState(true);
@@ -31,7 +24,7 @@ export const Reminders = () => {
 
 
     
-    const onChange = (event, selectedDate) => {
+    const onChange = (_event, selectedDate) => {
         const currentDate = selectedDate || date;
         setShow(Platform.OS === 'ios');
         setDate(currentDate);
@@ -49,6 +42,11 @@ export const Reminders = () => {
 
   return (
     <View style= {styles.container}>
+      <View style={styles.headingWrapper}>
+      <Text style={styles.heading}>What is your</Text>
+      <Text style={styles.heading}>medication?</Text>
+      </View>
+      <TextInput  placeholder="Medication" style={styles.input}/>
     <View style= {styles.headingWrapper}>
         <Text style={styles.heading}>What time do you need</Text>
         <Text style={styles.heading}>to take your medication?</Text>
@@ -93,6 +91,14 @@ export const Reminders = () => {
           );
         })}
       </View>
+      <Button
+        title='Create'
+        color='#07b81f'
+        accessibilityLabel='Learn more about this button'
+      />
+      <Pressable style={styles.button}>
+        <Text style={styles.buttonText} onPress={() => navigation.navigate("ReminderMenu")}>Go Back</Text>
+      </Pressable>
     </View>
   )
 }

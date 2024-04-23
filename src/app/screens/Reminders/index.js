@@ -1,1 +1,1 @@
-export {Reminders} from './Reminders'
+export {ReminderDisplay} from './Reminders'
