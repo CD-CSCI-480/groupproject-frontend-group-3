@@ -5,6 +5,7 @@ import {styles} from './styles';
 
 export const ReminderMenu = ({navigation}) => {
   return (
+    
     <View>
         <Text style={styles.center}>
             Need a Reminder?
