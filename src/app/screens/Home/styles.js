@@ -9,19 +9,31 @@ export const styles = StyleSheet.create({
   welcomeText: {
     fontSize: 24,
     fontWeight: 'bold',
-    marginBottom: 16,
+    marginBottom: 10,
     color: '#003006',
+    textAlign:"center"
   },
   chatBubble: {
-    backgroundColor: '#0B93F6',
+    backgroundColor: '#10940c',
     borderRadius: 50,
-    padding: 16,
+    padding: 25,
     position: 'relative',
     alignSelf: 'flex-end',
-    marginRight: 16,
+    marginRight: 25,
+    marginBottom:25,
   },
   calendarIcon: {
-    fontSize: 30,
+    fontSize: 40,
     color: 'white',
   },
+  image:{
+    width: 80, 
+    height: 100,  
+    alignSelf:"center",
+    marginBottom:20
+  },
+  welcomeComp:{
+    marginBottom:'auto',
+    marginTop:80,
+  }
 });
