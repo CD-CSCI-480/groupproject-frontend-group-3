@@ -4,7 +4,8 @@ import { FontAwesome } from '@expo/vector-icons';// Font awesome allows symbols 
 //import Colors from '../../../constants/Colors'; // Importing colors from the Colors.ts file to create a uniform theme of light or dark blue
 
 export default function MenuStack(){ // Creating a function MenuStack to make a layout for everything on the menu
-    return <Stack screenOptions={{ // Putting the items in a stack and creating a list of screen options
+    return (
+    <Stack screenOptions={{ // Putting the items in a stack and creating a list of screen options
         headerRight: () => ( 
         // I couldn't create a comment on the line below so I put it here
         //Makes each menu option a link that goes into its own separate page. COME BACK TO THIS
@@ -29,5 +30,6 @@ export default function MenuStack(){ // Creating a function MenuStack to make a 
         <Stack.Screen
             name='index' options={{title:'Menu'}} //Names the screen index withthe title of Menu showing up at the top
         />
-    </Stack>;
+    </Stack>
+    )
 }

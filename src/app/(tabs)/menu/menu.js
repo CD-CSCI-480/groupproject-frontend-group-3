@@ -1,13 +1,19 @@
-import { View, Text, FlatList, StyleSheet, Pressable, Image } from 'react-native';
+import { View, Text, FlatList, StyleSheet, Pressable, Image, TextInput } from 'react-native';
 import React from 'react';
-import diseases from '../../Info/disease';
+import diseases, { getListfromFromBackend } from '../../Info/disease';
 import Options from "../../../components/menuoptions";
+
 
 const MenuScreen = () =>{
     return(
         <View style = {styles.container}>
+          <TextInput  placeholder="Name" style={styles.input} />
+          <TextInput  placeholder="Text" style={styles.input} />
+          <Pressable style={styles.button}>
+            <Text style={styles.buttonText}>Submit</Text>
+          </Pressable>
             <FlatList
-            data = {diseases}
+            data = {getListfromFromBackend()}
             //renderItem={({item}) => }
             //keyExtractor={(item) => item.id.toString()}
             renderItem={({ item }) => (
@@ -47,6 +53,30 @@ const styles = StyleSheet.create({
       name: {
         fontSize: 16,
         fontWeight: 'bold',
+      },
+      input: {
+        height: 40,
+        margin: 15,
+        borderWidth: 1,
+        padding: 10,
+        borderRadius:20,
+        borderColor:'#003006',
+      },
+      button:{
+        
+        alignItems: 'center',
+        justifyContent: 'center',
+        paddingVertical: 12,
+        paddingHorizontal: 10,
+        width: "20%",
+        borderRadius: 20,
+        elevation: 3,
+        backgroundColor: '#003006',
+        marginLeft: 'auto', marginRight:'auto',
+      },
+      buttonText: {
+        color:'white',
+        fontWeight: '700'
       },
 });
 export default MenuScreen;
