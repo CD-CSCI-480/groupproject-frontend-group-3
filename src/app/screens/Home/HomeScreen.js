@@ -5,7 +5,7 @@ import {styles} from './styles';
 export const HomeScreen = ({navigation}) => {
   return (
     <ImageBackground
-      source={require('/Users/spatel211students.desu.edu/dev-SE/groupproject-frontend-group-3/src/app/screens/Home/green-geometric.avif')}
+      source={require('./green-geometric.avif')}
       style={styles.container}
     >
       <View style={styles.welcomeComp}>
